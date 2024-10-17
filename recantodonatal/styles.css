@@ -1,0 +1,353 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Hero Section (Cabeçalho) */
+.hero-section {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo horizontalmente */
+    align-items: center;      /* Centraliza o conteúdo verticalmente */
+    text-align: center;       /* Centraliza o texto */
+    background-image: url('/images/bg.png'); /* Adiciona a imagem de fundo */
+    background-size: cover;   /* Faz com que a imagem cubra toda a área */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    height: 100vh;            /* Faz com que o header tenha a altura total da tela */
+    color: white;             /* Define a cor do texto como branco */
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #d84343;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff4c4c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d84343;
+}
+
+.hero-image-container {
+    max-width: 1200px;
+}
+
+.hero-image {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section (Destaque do Evento) */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+    background-color: white;
+    min-height: 80vh;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section-text {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.about-image-container {
+    max-width: 500px;
+}
+
+.about-image {
+    max-width: 120%;
+    border-radius: 10px;
+}
+
+/* Seção de Coleções */
+.collection-section {
+    text-align: center; /* Centraliza o texto */
+    padding: 50px 20px; /* Adiciona espaçamento ao redor */
+    background-color: #f7f7f7; /* Cor de fundo da seção */
+}
+
+.collection-title {
+    font-size: 15pt; /* Tamanho do título */
+    margin: 15px 0; /* Espaçamento acima e abaixo do título */
+}
+
+.collection-container {
+    display: flex; /* Usar flexbox para layout */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+.collection-item {
+    background-color: white; /* Fundo branco para os itens */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px; /* Espaçamento interno */
+    max-width: 300px; /* Largura máxima dos itens */
+    display: flex; /* Usar flexbox para alinhar conteúdo */
+    flex-direction: column; /* Alinha itens verticalmente */
+    align-items: center; /* Centraliza itens horizontalmente */
+    transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.collection-item:hover {
+    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+}
+
+.collection-image {
+    max-width: 100%; /* Faz com que a imagem se ajuste ao contêiner */
+    border-radius: 10px; /* Bordas arredondadas na imagem */
+}
+
+.cta-button {
+    display: inline-block; /* Mantém o botão como um bloco */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    background-color: #ff4c4c; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 20px; /* Bordas arredondadas */
+    margin-top: 15px; /* Espaçamento acima do botão */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.cta-button:hover {
+    background-color: #d84343; /* Cor do botão ao passar o mouse */
+}
+
+/* Volunteer Section (Voluntariado) */
+.volunteer-section {
+    padding: 100px;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.volunteer-section .section-title {
+    font-size: 2.5rem;
+    color: #ff4c4c;
+    margin-bottom: 20px;
+}
+
+.volunteer-section .section-text {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Footer Section */
+.footer-section {
+    padding: 30px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-section p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-section, .about-section {
+        flex-direction: column;
+        padding: 50px;
+        text-align: center;
+    }
+
+    .hero-content, .about-content {
+        margin-bottom: 30px;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Estilo para o link do WhatsApp */
+.whatsapp-link {
+    position: fixed; /* Fixa a posição */
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da direita */
+    z-index: 1000; /* Mantém acima de outros elementos */
+}
+
+.whatsapp-icon {
+    width: 60px; /* Largura do ícone */
+    height: auto; /* Altura automática */
+    border-radius: 50%; /* Arredonda o ícone */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    transition: transform 0.3s; /* Animação de transição */
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+}
+
+.modal {
+    display: none; /* Oculte o modal por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro para o modal */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Certifique-se de que o modal esteja acima de outros conteúdos */
+}
+
+.close-button {
+    float: right; /* Alinha à direita */
+    background: none; /* Remove fundo */
+    border: none; /* Remove borda */
+    cursor: pointer; /* Muda cursor para indicar clicável */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: #ff4c4c; /* Cor do texto */
+}
+
+.close-button:hover {
+    color: #d84343; /* Cor ao passar o mouse */
+}
+
+
+/* Oculta elementos */
+.hidden {
+    display: none;
+}
+
+/* Estilo do Formulário */
+.form-container {
+    background-color: #fff; /* Fundo branco para o formulário */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    padding: 30px; /* Espaçamento interno */
+    max-width: 600px; /* Largura máxima do formulário */
+    margin: 20px auto; /* Centraliza o formulário */
+}
+
+.form-title {
+    font-size: 2rem; /* Tamanho do título */
+    color: #333; /* Cor do texto */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Espaçamento entre os grupos */
+}
+
+.form-group label {
+    font-size: 1rem; /* Tamanho da fonte do rótulo */
+    color: #666; /* Cor do texto do rótulo */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%; /* Largura total dos campos */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: border-color 0.3s; /* Transição suave na borda */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #ff4c4c; /* Cor da borda ao focar */
+    outline: none; /* Remove a borda de foco padrão */
+}
+
+.form-button {
+    background-color: #ff4c4c; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.form-button:hover {
+    background-color: #d84343; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilo específico para o Pix */
+.pix-section {
+    margin-top: 20px; /* Espaçamento acima da seção do Pix */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #f9f9f9; /* Cor de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+}
+
+.pix-section h2 {
+    font-size: 1.5rem; /* Tamanho do título */
+    color: #333; /* Cor do texto */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.pix-section img {
+    max-width: 100%; /* Faz com que a imagem se ajuste ao contêiner */
+    border-radius: 5px; /* Bordas arredondadas na imagem */
+}
+
+.styled-map {
+    width: 400px;    /* Aumenta a largura para 800px */
+    height: 300px;   /* Aumenta a altura para 500px */
+    border: 0;
+    border-radius: 20px; /* Aumenta a borda arredondada para 20px */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa para destacar */
+    overflow: hidden; /* Garante que o conteúdo do mapa não ultrapasse os cantos arredondados */
+}
+/* Estilo para seções com transição */
+.section {
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(20px); /* Move a seção levemente para baixo */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transições suaves */
+}
+
+/* Estilo para seções visíveis */
+.section.visible {
+    opacity: 1; /* Tornar a seção visível */
+    transform: translateY(0); /* Volta à posição original */
+}

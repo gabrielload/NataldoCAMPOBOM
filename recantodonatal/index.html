@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recanto do Natal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Seção de Cabeçalho -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Recanto do Natal</h1>
+            <p class="hero-subtitle">A Magia do Natal no Lugar Certo</p>
+            <a href="#about" class="cta-button">Descubra mais</a>
+        </div>
+    </header>
+    
+   <!-- Seção de Destaque -->
+   <section class="about-section section">
+    <div id="about" class="about-content">
+        <h2 class="section-title">Sobre o Evento</h2>
+        <p class="section-text">Junte-se a nós na R. Monteiro Lobato, 42 - N, Campo Bom - RS, em frente à Casa de Carnes Cristo Rei, para uma festa repleta de alegria! Teremos brinquedos infláveis, com fichas disponíveis no dia, além de muitas comidas deliciosas e divertidas brincadeiras para todas as idades.
+            <br>
+            Não perca a oportunidade de viver momentos mágicos e celebrar a magia do Natal com sua família e amigos!
+        </p>
+    </div>
+
+    <!-- Imagem Central -->
+    <div class="image-container">
+        <img id="dynamicImage" src="images/olhoaberto.png" alt="Imagem de Papai Noel" class="about-image">
+    </div>
+</section>
+
+    
+    <!-- Seção de Coleções -->
+    <section class="collection-section section">
+
+        <h2 class="section-title">Nossos parceiros</h2>
+        <div class="collection-container">
+            <div class="collection-item">
+                <img src="images/cristorei.png" alt="Árvores de Natal" class="collection-image">
+                <h3 class="collection-title">Casa de Carnes Cristo-Rei</h3>
+                <a href="#" class="cta-button">Saber mais</a>
+            </div>
+            <div class="collection-item">
+                <img style="height: 259px;" src="images/assads.jpeg" alt="Enfeites Especiais" class="collection-image">
+                <h3 class="collection-title">Assados Recanto da Brasa</h3>
+                <a href="#" class="cta-button">Saber mais</a>
+            </div>
+            <div class="collection-item">
+                <img src="images/Instagram Post Feliz Natal Papai Noel Verde.jpg" alt="Luzes de Natal" class="collection-image">
+                <h3 class="collection-title">Sua empresa</h3>
+                <a href="#" class="cta-button">Saber mais</a>
+            </div>
+        </div>
+        <a href="#" class="cta-button">Seja uma empresa parceira</a>
+    </section>
+
+    <!-- Seção de Voluntários -->
+    <section class="volunteer-section section" id="voluntario">
+        <h2 class="section-title">Seja um apoiador</h2>
+        <p class="section-text">Você pode fazer a diferença! Estamos em busca de pessoas que queiram espalhar alegria e compartilhar o espírito natalino com a comunidade.</p>
+        <!-- Adiciona o botão para abrir o modal -->
+<a href="#" class="cta-button" onclick="openModal()">Faça uma doação</a>
+
+        
+    </section>
+
+    <!-- Seção de Rodapé -->
+    <footer class="footer-section">
+        <p>&copy; 2024 Recanto do Natal. Todos os direitos reservados a The Nask Soluções Digitais.</p>
+    </footer>
+
+<!-- Modal -->
+<div id="donationModal" class="modal">
+    <div class="form-container">
+
+            <!-- Botão de Envio -->
+            
+        </form>
+        
+        <!-- Link e QR Code do Pix -->
+        <div class="pix-section">
+            <h3>Faça sua doação via Pix</h3>
+            <p>Use a chave Pix abaixo:</p>
+            <p><strong>recantodonatal@gmail.com</strong></p>
+            <img src="images/pix.png" alt="QR Code Pix" class="qrcode-pix">
+            <p>Ou escaneie o QR Code acima.</p>
+            <a  href="https://api.whatsapp.com/send?phone=555190161758&text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank" class="submit-button cta-button">Entrar em contato</a>
+        </div>
+    </div>
+    
+</div>
+
+<script>
+    // Função para abrir o modal
+    function openModal() {
+        document.getElementById('donationModal').style.display = 'block';
+    }
+
+    // Função para fechar o modal (já existente)
+    function closeModal() {
+        document.getElementById('donationModal').style.display = 'none';
+    }
+
+    // Fecha o modal ao clicar fora dele
+    window.onclick = function(event) {
+        const modal = document.getElementById('donationModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    }
+</script>
+
+
+    
+    <script src="script.js"></script>
+    <!-- Link do WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=555190161758&text=Olá!%20Gostaria%20de%20mais%20informações." class="whatsapp-link" target="_blank" rel="noopener noreferrer">
+        <img src="images/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+    </a>
+    <script>
+        // Função para verificar a visibilidade das seções
+        function checkVisibility() {
+            const sections = document.querySelectorAll('.section'); // Seleciona todas as seções
+            const windowHeight = window.innerHeight; // Altura da janela
+    
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect(); // Obtém a posição da seção
+                if (rect.top < windowHeight && rect.bottom > 0) {
+                    section.classList.add('visible'); // Adiciona a classe se a seção estiver visível
+                } else {
+                    section.classList.remove('visible'); // Remove a classe se não estiver visível
+                }
+            });
+        }
+    
+        // Verifica a visibilidade ao rolar e ao carregar a página
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+    </script>
+    
+    <script>
+        // Script para alternar as imagens a cada 3 segundos
+        const dynamicImage = document.getElementById('dynamicImage');
+        const images = ['images/olhoaberto.png', 'images/piscando.png'];
+        let currentIndex = 0;
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % images.length; // Altera o índice da imagem
+            dynamicImage.src = images[currentIndex]; // Muda a fonte da imagem
+        }, 3000);
+    </script>
+
+</body>
+</html>
