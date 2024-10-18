@@ -18,7 +18,7 @@ body {
     justify-content: center;  /* Centraliza o conteúdo horizontalmente */
     align-items: center;      /* Centraliza o conteúdo verticalmente */
     text-align: center;       /* Centraliza o texto */
-    background-image: url('/images/bg.png'); /* Adiciona a imagem de fundo */
+    background-image: url('//recantodonatal/images/bg.png'); /* Adiciona a imagem de fundo */
     background-size: cover;   /* Faz com que a imagem cubra toda a área */
     background-position: center; /* Centraliza a imagem de fundo */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
